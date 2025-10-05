@@ -1,0 +1,32 @@
+{
+  "name": "gastrotracker",
+  "version": "1.0.0",
+  "description": "An application for keeping track of symptoms related to gastroparesis",
+  "keywords": [
+    "electron",
+    "javascript",
+    "nodejs",
+    "gastroparesis"
+  ],
+  "homepage": "https://github.com/cheesits456/GastroTracker#readme",
+  "bugs": {
+    "url": "https://github.com/cheesits456/GastroTracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheesits456/GastroTracker.git"
+  },
+  "license": "GPL-3.0",
+  "author": "cheesits456",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "compile": "./compilers/compile.sh",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^38.2.1",
+    "electron-packager": "^17.1.2"
+  }
+}
