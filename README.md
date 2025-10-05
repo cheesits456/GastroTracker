@@ -21,5 +21,5 @@ npm i -g electron electron-packager
     "compile": "./compilers/compile.sh",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }
 ```
