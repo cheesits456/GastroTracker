@@ -10,16 +10,16 @@ function loadPage(page) {
 			pageName = "Dashboard";
 			pageIcon = "gauge-high";
 			pageContent = `
-				<div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<h1>Hello World</h1>
-		</div>
-		<div class="col-md-6">
-			<h1>Hello World</h1>
-		</div>
-	</div>
-</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<h1>Hello World</h1>
+						</div>
+						<div class="col">
+							<h1>Hello World</h1>
+						</div>
+					</div>
+				</div>
 			`
 			break;
 		case "new":
