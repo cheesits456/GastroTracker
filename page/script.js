@@ -5,6 +5,7 @@ setCopyrightInfo();
 loadPage("dashboard");
 
 
+
 function loadPage(page) {
 	let pageName = "";
 	let pageIcon = "";
