@@ -58,6 +58,21 @@ nav {
 	box-shadow: 0 0 5px 0 #ffffff99;
 }
 
+.nav-footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 14.5rem;
+}
+
+.nav-footer p {
+	background-color: #61666d;
+	padding: 0.5rem;
+	box-shadow: 0 0 3px 0 #00000099;
+	border-radius: 0.5rem;
+	font-size: 10pt;
+}
+
 #main {
 	margin: 5rem 1rem 1rem 15.5rem;
 }
