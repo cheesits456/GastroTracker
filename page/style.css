@@ -18,7 +18,7 @@ header {
 nav {
 	background-color: var(--bs-secondary);
 	position: absolute;
-	left:0;
+	left: 0;
 	height: 100%;
 	width: 14.5rem;
 }
@@ -36,12 +36,20 @@ nav {
 }
 
 .nav-list li {
-	text-align: center;
-	margin-bottom: 1rem;
+	list-style-type: none;
+	margin: 0 0.5rem 0.5rem;
+	padding: 0.5rem;
+	background-color: #61666d;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 3px 0 #00000099;
+}
+
+.nav-list li:hover {
+	cursor: pointer;
+	background-color: var(--bs-primary-border-subtle);
+	box-shadow: 0 0 5px 0 #ffffff99;
 }
 
 main {
 	margin-left: 14.5rem;
 }
-
-
