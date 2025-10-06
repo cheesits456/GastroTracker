@@ -3,7 +3,9 @@
 }
 
 header {
-	position: absolute;
+	position: fixed;
+	top: 0;
+	display: flex;
 	align-items: center;
 	margin-left: 14.5rem;
 	background-color: var(--bs-primary);
@@ -19,7 +21,8 @@ header {
 
 nav {
 	background-color: var(--bs-secondary);
-	position: absolute;
+	position: fixed;
+	top: 0;
 	left: 0;
 	height: 100%;
 	width: 14.5rem;
