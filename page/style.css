@@ -24,9 +24,20 @@ nav {
 }
 
 .nav-header {
-	margin-top: 0.5rem;
-	text-shadow: 0 0 5px black;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	text-shadow: 0 0 3px black;
 	font-weight: bold;
+	text-align: center;
+}
+
+.nav-list {
+	padding: 0;
+}
+
+.nav-list li {
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 main {
