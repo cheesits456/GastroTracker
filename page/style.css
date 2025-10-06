@@ -11,6 +11,7 @@ header {
 	background-color: var(--bs-primary);
 	width: calc(100% - 14.5rem);
 	height: 4rem;
+	box-shadow: 0 0 5px 0 black;
 }
 
 #page-title {
@@ -26,6 +27,8 @@ nav {
 	left: 0;
 	height: 100%;
 	width: 14.5rem;
+	box-shadow: 0 0 5px 0 black;
+	z-index: 1;
 }
 
 .nav-header {
