@@ -7,9 +7,11 @@ loadPage("dashboard");
 
 
 function loadPage(page) {
+	const pageContent = loadHtml(page);
+	document.getElementById("main").innerHTML = pageContent;
+
 	let pageName = "";
 	let pageIcon = "";
-	let pageContent = "";
 
 	switch (page) {
 		case "dashboard":
@@ -26,6 +28,16 @@ function loadPage(page) {
 			document.getElementById(`navlink-dashboard`).classList.remove("active");
 			document.getElementById(`navlink-new`).classList.add("active");
 			document.getElementById(`navlink-all`).classList.remove("active");
+
+			const currentDate = new Date();
+			const year = currentDate.getFullYear();
+			let month = currentDate.getMonth() + 1;
+			let day = currentDate.getDate();
+
+			if (`${month}`.length === 1) month = `0${month}`;
+			if (`${day}`.length === 1) day = `0${day}`;
+
+			document.getElementById("date").value = `${year}-${month}-${day}`;
 			break;
 
 		case "all":
@@ -38,22 +50,7 @@ function loadPage(page) {
 			break;
 	};
 
-	pageContent = loadHtml(page);
-
 	document.getElementById("page-title").innerHTML = `<i class="fa-solid fa-${pageIcon}"></i> ${pageName}`;
-	document.getElementById("main").innerHTML = pageContent;
-
-	if (page === "new") {
-		const currentDate = new Date();
-		const year = currentDate.getFullYear();
-		let month = currentDate.getMonth() + 1;
-		let day = currentDate.getDate();
-
-		if (`${month}`.length === 1) month = `0${month}`;
-		if (`${day}`.length === 1) day = `0${day}`;
-
-		document.getElementById("date").value = `${year}-${month}-${day}`;
-	}
 };
 
 
