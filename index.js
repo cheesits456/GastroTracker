@@ -17,7 +17,6 @@ function createWindow() {
 
 	window.removeMenu();
 	window.loadFile(path.join("page", "index.html"));
-	window.maximize();
 }
 
 electron.app.whenReady().then(createWindow);
