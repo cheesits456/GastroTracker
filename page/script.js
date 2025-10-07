@@ -17,17 +17,19 @@ function loadPage(page) {
 		case "dashboard":
 			pageName = "Dashboard";
 			pageIcon = "gauge-high";
-			document.getElementById(`navlink-dashboard`).classList.add("active");
-			document.getElementById(`navlink-new`).classList.remove("active");
-			document.getElementById(`navlink-all`).classList.remove("active");
+			document.getElementById("navlink-dashboard").classList.add("active");
+			document.getElementById("navlink-new").classList.remove("active");
+			document.getElementById("navlink-all").classList.remove("active");
+
+			document.getElementById("statistic-food").innerText = "test";
 			break;
 
 		case "new":
 			pageName = "New Log Entry";
 			pageIcon = "pencil";
-			document.getElementById(`navlink-dashboard`).classList.remove("active");
-			document.getElementById(`navlink-new`).classList.add("active");
-			document.getElementById(`navlink-all`).classList.remove("active");
+			document.getElementById("navlink-dashboard").classList.remove("active");
+			document.getElementById("navlink-new").classList.add("active");
+			document.getElementById("navlink-all").classList.remove("active");
 
 			const currentDate = new Date();
 			const year = currentDate.getFullYear();
@@ -43,10 +45,9 @@ function loadPage(page) {
 		case "all":
 			pageName = "View All Logs";
 			pageIcon = "book";
-
-			document.getElementById(`navlink-dashboard`).classList.remove("active");
-			document.getElementById(`navlink-new`).classList.remove("active");
-			document.getElementById(`navlink-all`).classList.add("active");
+			document.getElementById("navlink-dashboard").classList.remove("active");
+			document.getElementById("navlink-new").classList.remove("active");
+			document.getElementById("navlink-all").classList.add("active");
 			break;
 	};
 
