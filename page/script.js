@@ -83,7 +83,7 @@ function loadPage(page) {
 
 		document.getElementById("date").value = `${year}-${month}-${day}`;
 	}
-}
+};
 
 
 
@@ -93,7 +93,7 @@ function setCopyrightInfo() {
 
 	document.getElementById("version-number").innerText = versionNumber;
 	document.getElementById("year").innerText = currentYear;
-}
+};
 
 
 
@@ -114,4 +114,4 @@ function toggleDateInput() {
 	} else {
 		document.getElementById("date").removeAttribute("disabled");
 	};
-}
+};
