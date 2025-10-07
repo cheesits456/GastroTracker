@@ -15,18 +15,7 @@ function loadPage(page) {
 		case "dashboard":
 			pageName = "Dashboard";
 			pageIcon = "gauge-high";
-			pageContent = `
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col">
-							<h1>Hello World</h1>
-						</div>
-						<div class="col">
-							<h1>Hello World</h1>
-						</div>
-					</div>
-				</div>
-			`;
+			pageContent = loadHtml("dashboard");
 			document.getElementById(`navlink-dashboard`).classList.add("active");
 			document.getElementById(`navlink-new`).classList.remove("active");
 			document.getElementById(`navlink-all`).classList.remove("active");
@@ -35,25 +24,7 @@ function loadPage(page) {
 		case "new":
 			pageName = "New Log Entry";
 			pageIcon = "pencil";
-			pageContent = `
-				<div class="container">
-					<form class="row">
-						<div class="col-5">
-							<label for="date">Date:</label>
-							<input id="date" class="form-control" type="date" disabled>
-						</div>
-						<div class="col-1">
-							<div class="form-check today-checkbox">
-								<input id="today" class="form-check-input hover-pointer" type="checkbox" checked onclick="toggleDateInput()">
-								<label class="form-check-label hover-pointer" for="today" onclick="toggleDateInput()">Today</label>
-							</div>
-						</div>
-						<div class="col">
-							<input class="form-control" type="text">
-						</div>
-					</form>
-				</div>
-			`;
+			pageContent = loadHtml("new");
 			document.getElementById(`navlink-dashboard`).classList.remove("active");
 			document.getElementById(`navlink-new`).classList.add("active");
 			document.getElementById(`navlink-all`).classList.remove("active");
@@ -83,6 +54,14 @@ function loadPage(page) {
 
 		document.getElementById("date").value = `${year}-${month}-${day}`;
 	}
+};
+
+
+
+function loadHtml(fileName) {
+	const filePath = path.join(".", "page", "templates", `${fileName}.html`);
+	const html = fs.readFileSync(filePath);
+	return html;
 };
 
 
