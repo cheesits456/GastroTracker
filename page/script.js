@@ -15,7 +15,6 @@ function loadPage(page) {
 		case "dashboard":
 			pageName = "Dashboard";
 			pageIcon = "gauge-high";
-			pageContent = loadHtml("dashboard");
 			document.getElementById(`navlink-dashboard`).classList.add("active");
 			document.getElementById(`navlink-new`).classList.remove("active");
 			document.getElementById(`navlink-all`).classList.remove("active");
@@ -24,7 +23,6 @@ function loadPage(page) {
 		case "new":
 			pageName = "New Log Entry";
 			pageIcon = "pencil";
-			pageContent = loadHtml("new");
 			document.getElementById(`navlink-dashboard`).classList.remove("active");
 			document.getElementById(`navlink-new`).classList.add("active");
 			document.getElementById(`navlink-all`).classList.remove("active");
@@ -38,7 +36,9 @@ function loadPage(page) {
 			document.getElementById(`navlink-new`).classList.remove("active");
 			document.getElementById(`navlink-all`).classList.add("active");
 			break;
-	}
+	};
+
+	pageContent = loadHtml(page);
 
 	document.getElementById("page-title").innerHTML = `<i class="fa-solid fa-${pageIcon}"></i> ${pageName}`;
 	document.getElementById("main").innerHTML = pageContent;
