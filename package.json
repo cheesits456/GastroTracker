@@ -24,5 +24,8 @@
     "compile": "./compilers/compile.sh",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "os": "^0.1.2"
   }
 }
