@@ -23,7 +23,10 @@ function loadPage(page) {
 			document.getElementById("navlink-new").classList.remove("active");
 			document.getElementById("navlink-all").classList.remove("active");
 
-			document.getElementById("statistic-food").innerText = "test";
+			document.getElementById("statistic-food").innerText = 0;
+			document.getElementById("statistic-water").innerText = 0;
+			document.getElementById("statistic-defecation").innerText = 0;
+			document.getElementById("statistic-vomit").innerText = 0;
 			break;
 
 		case "new":
