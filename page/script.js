@@ -6,6 +6,8 @@ loadPage("dashboard");
 
 
 
+
+
 function loadPage(page) {
 	const pageContent = loadHtml(page);
 	document.getElementById("main").innerHTML = pageContent;
