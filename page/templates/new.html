@@ -1,5 +1,57 @@
 <div class="container">
+	<div class="row">
+		<div class="align-center">Fill out the form below then press the 'Submit' button in the corner</div>
+	</div>
+	<br><br><br>
 	<form class="row">
+		<div class="col-3">
+			<label class="form-label" for="badness">How bad was the pain today?</label>
+			<input id="badness" type="range" class="form-range" min="0" max="10" value="5" step="1">
+			<br><br>
+			<div>Did you eat today?</div>
+			<div class="form-check form-check-inline">
+				<input id="eaten-yes" class="form-check-input" type="radio" name="eaten-today" value="yes">
+				<label class="form-check-label" for="eaten-yes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input id="eaten-no" class="form-check-input" type="radio" name="eaten-today" value="no" checked>
+				<label class="form-check-label" for="eaten-no">No</label>
+			</div>
+			<br><br>
+			<div>Did you vomit today?</div>
+			<div class="form-check form-check-inline">
+				<input id="vomited-yes" class="form-check-input" type="radio" name="vomited-today" value="yes">
+				<label class="form-check-label" for="vomited-yes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input id="vomited-no" class="form-check-input" type="radio" name="vomited-today" value="no" checked>
+				<label class="form-check-label" for="vomited-no">No</label>
+			</div>
+		</div>
+		<div class="col-3">
+			<label class="form-label" for="sleep">How did you sleep last night?</label>
+			<input id="sleep" type="range" class="form-range" min="0" max="10" value="5" step="1">
+			<br><br>
+			<div>Did you drink today?</div>
+			<div class="form-check form-check-inline">
+				<input id="drank-yes" class="form-check-input" type="radio" name="drank-today" value="yes">
+				<label class="form-check-label" for="drank-yes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input id="drank-no" class="form-check-input" type="radio" name="drank-today" value="no" checked>
+				<label class="form-check-label" for="drank-no">No</label>
+			</div>
+			<br><br>
+			<div>Did you poop today?</div>
+			<div class="form-check form-check-inline">
+				<input id="pooped-yes" class="form-check-input" type="radio" name="pooped-today" value="yes">
+				<label class="form-check-label" for="pooped-yes">Yes</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input id="pooped-no" class="form-check-input" type="radio" name="pooped-today" value="no" checked>
+				<label class="form-check-label" for="pooped-no">No</label>
+			</div>
+		</div>
 		<div class="col-5">
 			<label for="date">Date:</label>
 			<input id="date" class="form-control" type="date" disabled>
@@ -10,8 +62,6 @@
 				<label class="form-check-label hover-pointer" for="today" onclick="toggleDateInput()">Today</label>
 			</div>
 		</div>
-		<div class="col">
-			<input class="form-control" type="text">
-		</div>
 	</form>
+	<div class="btn btn-primary submit-button" onclick="submitForm()">Submit</div>
 </div>
