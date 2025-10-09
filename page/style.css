@@ -102,3 +102,15 @@ nav {
 .today-checkbox {
 	margin-top: 2rem;
 }
+
+.submit-button {
+	position:absolute;
+	bottom: 0;
+	right: 0;
+	margin: 1rem;
+	font-size: 20pt;
+}
+
+.submit-button:active {
+	background-color: var(--bs-primary-border-subtle) !important;
+}
