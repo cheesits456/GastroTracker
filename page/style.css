@@ -6,6 +6,10 @@
 	cursor: pointer;
 }
 
+.align-center {
+	text-align: center;
+}
+
 header {
 	position: fixed;
 	top: 0;
