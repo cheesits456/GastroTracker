@@ -79,6 +79,28 @@ function setCopyrightInfo() {
 
 
 
+function submitForm() {
+	const pain = document.getElementById("badness").value;
+	const sleep = document.getElementById("sleep").value;
+	const eatenToday = $("input[type='radio'][name='eaten-today']:checked").val() === "yes" ? true : false;
+	const drankToday = $("input[type='radio'][name='drank-today']:checked").val() === "yes" ? true : false;
+	const vomitedToday = $("input[type='radio'][name='vomited-today']:checked").val() === "yes" ? true : false;
+	const poopedToday = $("input[type='radio'][name='pooped-today']:checked").val() === "yes" ? true : false;
+	const date = document.getElementById("date").value;
+	const data = {
+		date,
+		pain,
+		sleep,
+		eatenToday,
+		drankToday,
+		vomitedToday,
+		poopedToday
+	};
+	console.log(data);
+};
+
+
+
 function toggleDateInput() {
 	const checked = document.getElementById("today").checked;
 	if (checked) {
