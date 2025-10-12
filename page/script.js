@@ -93,7 +93,6 @@ function submitForm() {
 	const poopedToday = $("input[type='radio'][name='pooped-today']:checked").val() === "yes" ? true : false;
 	const date = document.getElementById("date").value;
 	const data = {
-		date,
 		pain,
 		sleep,
 		eatenToday,
