@@ -22,6 +22,7 @@ header {
 	width: calc(100% - 14.5rem);
 	height: 4rem;
 	box-shadow: 0 0 5px 0 black;
+	z-index: 1;
 }
 
 #page-title {
@@ -38,7 +39,7 @@ nav {
 	height: 100%;
 	width: 14.5rem;
 	box-shadow: 0 0 5px 0 black;
-	z-index: 1;
+	z-index: 2;
 }
 
 .nav-header {
