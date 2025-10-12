@@ -1,10 +1,4 @@
-const fs = require("fs");
 const path = require("path");
-
-const os = require("os");
-
-const dataPath = path.join(os.homedir(), "Documents", "GastroTracker");
-if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath);
 
 const electron = require("electron");
 

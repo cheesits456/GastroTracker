@@ -1,6 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 
+const os = require("os");
+
+const dataPath = path.join(os.homedir(), "Documents", "GastroTracker");
+if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath);
+
 setCopyrightInfo();
 loadPage("dashboard");
 
@@ -96,7 +101,8 @@ function submitForm() {
 		vomitedToday,
 		poopedToday
 	};
-	console.log(data);
+	fs.writeFileSync(path.join(dataPath, `${date}.json`), JSON.stringify(data, null, "\t"));
+	$("#saved-modal").modal("toggle");
 };
 
 
